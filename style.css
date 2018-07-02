@@ -113,6 +113,24 @@ ul {
 
 .main-heading-text {
     font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+@media all and (orientation:portrait) {
+    
+    .main-heading {
+        min-height: auto;
+    }
+
+    .main-heading-text {
+        padding: 5%;
+    }
+
+}
+
+.main-heading-text {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .main-section {
@@ -276,6 +294,7 @@ ul {
 }
 
 @media all and (orientation:portrait) {
+    
     .pricing-column {
         padding-left: 5%;
         padding-right: 5%;
@@ -418,13 +437,50 @@ footer {
     justify-content: center;
 }
 
+.more-information-list {
+    margin-left: 0; padding-left: 0;
+}
+
+@media all and (orientation:portrait){
+    
+    .site-map-list {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        padding-left: 5% !important;
+        padding-right: 5%;
+    }
+
+    .contact-section-column {
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+
+
+}
+
 
 /* Media Queries */ 
 
 @media all and (max-height: 950px)  {
+    
+    .pricing-section {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    
     .service-section-column {
         padding-top: 5%;
         padding-bottom: 5%;
     }
+}
+
+@media all and (max-width: 361) {
+
+    .main-heading-text {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
 }
 
