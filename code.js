@@ -1,4 +1,4 @@
-(}$(document).ready(function() {
+($(document).ready(function() {
     $(".price-item-link").on("click", function(e) {
         e.preventDefault();
         console.log("Hello?");
