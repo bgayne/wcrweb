@@ -9,8 +9,10 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
         <script src="https://use.fontawesome.com/1db05d8be8.js"></script>
+        <link href="resources/hamburgers.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
         <link rel="stylesheet" href="style.css">
@@ -20,6 +22,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="mobile-nav">
+            <button class="hamburger hamburger-menu hamburger--arrow" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>  
+            <!--
             <div class="hamburger-menu">
                 <span id="ham-top" class="hamburger-stripe">
 
@@ -30,6 +38,14 @@
                 <span id="ham-bottom" class="hamburger-stripe">
                 
                 </span>
+            </div>
+            -->
+            <div class="mobile-nav-horiz">
+                <ul id="mobile-nav-menu" class="">
+                    <li class="mobile-nav-item"><a href="#" class="mobile-nav-item-link"></a>Option 1</li>
+                    <li class="mobile-nav-item"><a href="#" class="mobile-nav-item-link"></a>Option 2</li>
+                    <li class="mobile-nav-item"><a href="#" class="mobile-nav-item-link"></a>Option 3</li>
+                </ul>
             </div>
             <ul id="mobile-nav-menu" class="hidden">
                 <li class="mobile-nav-item"><a href="#" class="mobile-nav-item-link"></a>Option 1</li>
