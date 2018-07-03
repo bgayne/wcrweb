@@ -18,6 +18,84 @@ a:visited {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.mobile-nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    background-color: #c91400;
+    max-height: 60px;
+    transition: max-height .5s;
+    align-items: center;
+    justify-content: center;
+    transition: max-height .5s;
+
+}
+
+.hamburger-menu {
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hamburger-stripe {
+    position: absolute;
+    width: 30px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 25px;
+}
+
+#ham-top {
+    left: 25%;
+    top: 32%;
+    transition: transform .5s;
+
+}
+
+#ham-mid {
+    left: 25%;
+    top: 50%;
+}
+
+#ham-bottom {
+    left: 25%;
+    top: 66%;
+    transition: transform .5s;
+}
+
+.hidden {
+    display: none;
+}
+
+.ham-top-rotate {
+    top: 50% !important;
+    transform: rotate(45deg);
+}
+
+.ham-bottom-rotate {
+    top: 50% !important;
+    transform: rotate(-45deg);
+}
+
+.mobile-nav-expanded {
+    height: 100%;
+    max-height: 100%;
+    transition: max-height .5s;
 }
 
 .nav {
@@ -37,6 +115,7 @@ ul {
 .pure-menu-heading {
     display: inline-flex;
     align-content: center;
+    align-items: center;
 }
 
 .pure-menu-heading p{
@@ -80,6 +159,8 @@ ul {
     min-height: 70vh;
     display: flex;
     align-items: center;
+    align-content: center;
+
     background-color: #2c3e50;
     /*background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232980b9' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3E%3C/g%3E%3C/svg%3E");
     */
@@ -473,6 +554,7 @@ footer {
         padding-top: 5%;
         padding-bottom: 5%;
     }
+
 }
 
 @media all and (max-width: 361) {
