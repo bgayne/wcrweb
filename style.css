@@ -558,6 +558,7 @@ ul {
         padding-right: 5%; 
     }
 }
+
 .business-block {
     font-weight: 200;
 }
@@ -694,4 +695,55 @@ footer {
     }
 
 }
+
+
+/* iPad */
+
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+
+    .service-section {
+        min-height: 0 !important;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .pricing-section {
+        min-height: 0 !important;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .sales-section {
+        min-height: 0 !important;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    #business-icon {
+        max-width: 35% !important;
+    }
+
+    .business-section-column {
+        padding-top: 0px;
+    }
+
+    .contact-section ul {
+        margin-left: 0;
+        margin-right: 0 !important;
+    }
+
+}
+
+/* iPad pro */
+
+@media screen and (min-device-width: 1023) and (orientation:portrait) {
+    
+    .business-section {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
 
