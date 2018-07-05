@@ -28,6 +28,11 @@ $(document).ready(function() {
         */
         $(".mobile-nav-horiz").toggleClass("mobile-nav-horiz-expanded");
         $(".hamburger-menu").toggleClass("is-active");
+    });
+
+    $(".mobile-nav-dropdown").on("click", function(e) {
+        $("#mobile-nav-page-menu").toggleClass("hidden");
+        console.log("Hello");
     })
 
 });
