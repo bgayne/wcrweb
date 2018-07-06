@@ -739,10 +739,15 @@ footer {
 @media screen and (min-device-width: 1023) and (orientation:portrait) {
     
     .business-section {
+        width: 100%;
         display: flex;
         justify-content: center;
+        flex-direction: none!important;
     }
 
+    .business-section-column {
+        width: 100%;
+    }
 
 }
 
