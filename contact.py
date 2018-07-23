@@ -24,7 +24,7 @@ def get_contact():
         return app.send_static_file('index.html')
     if request.method == 'POST':
         print("Hello, world!")
-        sg = sendgrid.SendGridAPIClient(apikey="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")
+        sg = sendgrid.SendGridAPIClient(apikey="")
         json = request.get_json(force=True)
         to_email = Email("brandon@winchestercomputers.com")
         from_email = Email(json['email'])
