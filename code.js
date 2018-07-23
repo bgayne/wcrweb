@@ -35,4 +35,29 @@ $(document).ready(function() {
         console.log("Hello");
     })
 
+    $("#more-info-button").on("click", function(e) {
+        e.preventDefault();
+        console.log("Do I get here?");
+        $.post("http://127.0.0.1:5000/");
+    })
+
+    $("#submission-button").click(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url:"http://127.0.0.1:5000/",
+            type: "POST",
+            data: JSON.stringify(
+                {
+                    name:$("#name").val(),
+                    email:$("#email").val(),
+                    query:$("#query").val()
+                }),
+            dataType:"json",
+            contentType:"application/json; charset=utf-8",
+            success:function() {
+                console.log("It works!");
+            }
+        })
+    })
+
 });

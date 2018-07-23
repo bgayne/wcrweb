@@ -78,6 +78,21 @@
                 </li>
             </ul>
         </div>
+        <div class="contact-modal-desktop">
+            <div class="contact-modal-desktop-form display">
+                <i class="contact-modal-desktop-exit fas fa-times-thin fa-2x"></i>
+                <h2>Contact Us</h2>
+                <form action="/" method="post">
+                    <span class="form-field-container form-item"><p><b>Name: </b></p><input type="text" id="name" placeholder="Name"></span>
+                    <span class="form-field-container form-item"><p><b>Email: </b></p><input type="text" id="email" placeholder="Email"></span>
+                    <span class="form-field-container form-item"><p><b>Query: </b></p><textarea id="query" placeholder="Query"></textarea></span>
+                    <div class="g-recaptcha" data-sitekey="4LyrnTkskdnkneEBBBmkmdkfeeoUMkkeellls1D"></div>
+                    <button id="submission-button" class="form-item">
+                        Submit  
+                    </button>
+                </form>
+            </div>
+        </div>
         <div id="home" class="pure-g main-heading">
             <div class="pure-u-lg-6-24">
 
@@ -381,7 +396,11 @@
                         Would you like to know more?
                     </li>
                     <li class="site-map-list-item">
-                        <input class="more-info-input" type="text" placeholder="email"> 
+                        <a id="more-info-button">
+                            <div>
+                                <p>Click to contact</p>
+                            </div>
+                        </a>
                     </li>
                     <li class="site-map-list-item">
                             <a id="facebook-icon" href="#" class="footer-social-icon-link"><i class="fab fa-facebook"></i></a>
