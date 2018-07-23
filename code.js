@@ -41,7 +41,7 @@ $(document).ready(function() {
         $.post("http://127.0.0.1:5000/");
     })
 
-    $("#submission-button").click(function(e) {
+   /* $("#submission-button").click(function(e) {
         e.preventDefault();
         $.ajax({
             url:"http://127.0.0.1:5000/",
@@ -59,5 +59,6 @@ $(document).ready(function() {
             }
         })
     })
+    */
 
 });

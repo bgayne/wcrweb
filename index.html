@@ -82,14 +82,17 @@
             <div class="contact-modal-desktop-form display">
                 <i class="contact-modal-desktop-exit fas fa-times-thin fa-2x"></i>
                 <h2>Contact Us</h2>
-                <form action="/" method="post">
+                <form action="/" method="post" id="contact-form">
                     <span class="form-field-container form-item"><p><b>Name: </b></p><input type="text" id="name" placeholder="Name"></span>
                     <span class="form-field-container form-item"><p><b>Email: </b></p><input type="text" id="email" placeholder="Email"></span>
                     <span class="form-field-container form-item"><p><b>Query: </b></p><textarea id="query" placeholder="Query"></textarea></span>
                     <div class="g-recaptcha" data-sitekey="4LyrnTkskdnkneEBBBmkmdkfeeoUMkkeellls1D"></div>
-                    <button id="submission-button" class="form-item">
-                        Submit  
+                    </form>
+                    <button form="contact-form" id="submission-button" class="form-item">
+                            Submit  
                     </button>
+                </div>
+
                 </form>
             </div>
         </div>
