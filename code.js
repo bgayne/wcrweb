@@ -1,11 +1,29 @@
+function isMobile() {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
+    if(h > w) return true;
+    else return false;
+}
+
 $(document).ready(function() {
+   
+    if(isMobile()) {
+
+        setTimeout(() => {
+            var captchaContainerWidth = document.getElementById("captcha").offsetWidth;
+            var captchaWidth = document.getElementById("captcha").firstChild.offsetWidth;
+            var ratio = captchaContainerWidth / captchaWidth;
+            console.log(captchaWidth, captchaContainerWidth);
+            console.log(ratio);
+            document.getElementById("captcha").firstChild.style.transform = "scale(" + ratio + ")";
+        }, 1000); //Should work 90% of the time... right?
+    }
+
     $(".price-item-link").on("click", function(e) {
         e.preventDefault();
-        console.log("Hello?");
         $(this).find("#dropdown-arrow").toggleClass("point-downwards");
         $(this).children("#diagnostic-more-info").toggleClass("pricing-item-hidden");
-        console.log($("#diagnostic-more-info"));
-        console.log(this);
     })
 
     //Shamlessly taken from https://www.taniarascia.com/smooth-scroll-to-id-with-jquery/
@@ -22,12 +40,6 @@ $(document).ready(function() {
     });
 
     $(".hamburger-menu").on("click", function(e) {
-        //$("#ham-mid").toggleClass("hidden");
-        console.log("Test");
-        /*
-        $(".mobile-nav").toggleClass("mobile-nav-expanded");
-        $("#mobile-nav-menu").toggleClass("hidden");
-        */
        if($(".contact-modal-desktop").hasClass("visible")) {
            $(".contact-modal-desktop").toggleClass("visible");
            $(".hamburger-menu").toggleClass("is-active");
@@ -54,7 +66,9 @@ $(document).ready(function() {
     })
 
     $("#contact-form").submit(function(e) {
+       
         e.preventDefault();
+       
         $this = $(this);
 
         var outbound = {};
@@ -70,7 +84,6 @@ $(document).ready(function() {
             dataType:"json",
             contentType:"application/json; charset=utf-8"
         }).done(function(response) {
-            console.log(response)
             if(response["valid"] === "true") {
                 $(".contact-modal-desktop").toggleClass("visible");
             }
