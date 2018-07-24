@@ -237,6 +237,11 @@ ul {
     align-content: center;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible; 
 }
 
 .contact-modal-desktop-form {
@@ -257,6 +262,10 @@ ul {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+.contact-modal-desktop-exit:hover {
+    cursor: pointer;
 }
 
 .fa-times-thin:before {
@@ -685,6 +694,10 @@ ul {
 
 .site-map-list-item a {
     color: inherit;
+}
+
+#more-info-button:hover {
+    cursor: pointer;
 }
 
 #more-info-button div {

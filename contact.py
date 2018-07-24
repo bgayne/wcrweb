@@ -21,7 +21,7 @@ def resources(dir, filename):
 @app.route('/', methods=['GET', 'POST'])
 def get_contact():
     if request.method == 'GET':
-        return app.send_static_file('index.html')
+        return send_file('index.html')
     if request.method == 'POST':
 
         sg = sendgrid.SendGridAPIClient(apikey="")

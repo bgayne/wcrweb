@@ -37,8 +37,11 @@ $(document).ready(function() {
 
     $("#more-info-button").on("click", function(e) {
         e.preventDefault();
-        console.log("Do I get here?");
-        $.post("http://127.0.0.1:5000/");
+        $(".contact-modal-desktop").toggleClass("visible");
+    })
+
+    $(".contact-modal-desktop-exit").click(function(e) {
+        $(".contact-modal-desktop").toggleClass("visible");
     })
 
    /* $("#submission-button").click(function(e) {
@@ -60,5 +63,7 @@ $(document).ready(function() {
         })
     })
     */
+
+    
 
 });
