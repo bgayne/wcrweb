@@ -239,10 +239,12 @@ ul {
     align-items: center;
     visibility: hidden;
 }
-
-.visible {
-    visibility: visible; 
+@media screen and (orientation:landscape) {
+    .visible {
+        visibility: visible; 
+    }
 }
+
 
 .contact-modal-desktop-form {
     width: 50%;
@@ -268,8 +270,38 @@ ul {
     cursor: pointer;
 }
 
+
+@media screen and (orientation:portrait) {
+    
+    .contact-modal-desktop {
+        transition: .5s;
+        visibility: visible !important;
+        left: -100vw;
+    }
+
+    .visible {
+        visibility: visible;
+        left: 0;
+    }
+
+    .contact-modal-desktop-form {
+        width: 100vw !important;
+        height: calc(100vh - 45px);
+        position: absolute;
+    }
+
+    .contact-modal-desktop-exit {
+        display: none;
+    }
+
+}
+
 .fa-times-thin:before {
 	content: '\00d7';
+}
+
+#contact-form {
+    width: 75%;
 }
 
 .form-field-container {

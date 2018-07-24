@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
         <link rel="stylesheet" href="style.css">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -82,12 +83,12 @@
             <div class="contact-modal-desktop-form">
                 <i class="contact-modal-desktop-exit fas fa-times-thin fa-2x"></i>
                 <h2>Contact Us</h2>
-                <form action="/" method="post" id="contact-form">
-                    <span class="form-field-container form-item"><p><b>Name: </b></p><input type="text" id="name" placeholder="Name"></span>
-                    <span class="form-field-container form-item"><p><b>Email: </b></p><input type="text" id="email" placeholder="Email"></span>
-                    <span class="form-field-container form-item"><p><b>Query: </b></p><textarea id="query" placeholder="Query"></textarea></span>
-                    <div class="g-recaptcha" data-sitekey="4LyrnTkskdnkneEBBBmkmdkfeeoUMkkeellls1D"></div>
-                    </form>
+                <form action="/contact" method="post" id="contact-form">
+                    <span class="form-field-container form-item"><p><b>Name: </b></p><input type="text" name="name" id="name" placeholder="Name"></span>
+                    <span class="form-field-container form-item"><p><b>Email: </b></p><input type="text" name="email" id="email" placeholder="Email"></span>
+                    <span class="form-field-container form-item"><p><b>Query: </b></p><textarea id="query" name="query" placeholder="Query"></textarea></span>
+                    <div class="g-recaptcha" data-sitekey="6LeYF2YUAAAAALgMEl5leWLWHHJ1C2zMBVrLaBpH"></div>
+                </form>
                     <button form="contact-form" id="submission-button" class="form-item">
                             Submit  
                     </button>
